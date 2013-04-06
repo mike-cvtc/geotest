@@ -2,15 +2,7 @@ $(function() {
   console.log("Hi");
 
   var updateResultsContainer = function(data) {
-    var currentObs = data.current_observation
-    var html = []
-    html.push("<ul>");
-    html.push("<li>" + currentObs.weather + "</li>");
-    html.push("<li>" + currentObs.temperature_string + "</li>");
-    html.push("<li>" + currentObs.wind_string + "</li>");
-    html.push("</ul>");
-    var html_str = html.join("");
-    $('#results').html(html_str);
+    $('#results').html("Write some code for this");
   }
 
   var weatherData = function(lat, lng) {
