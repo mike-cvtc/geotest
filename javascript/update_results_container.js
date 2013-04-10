@@ -6,9 +6,25 @@ $(function() {
     html.push("</li>");
     $('#results').html(html.join(""));
   };
+  
+  var updateDemoContainer = function() {
+	var html = [];
+	html.push("<ul>");
+	html.push("<li>This is some text for my demo container</li>");
+	html.push("</ul>");
+	// ["<ul>", "<li>....</li>", "</ul>"]
+	var htmlString = html.join("");
+	// "<ul><li>....</li></ul>"
+	$('#results').html(htmlString);
+  }
 
   $('#results_test').submit(function() {
     updateResultsContainer();
+    return false;
+  });
+  
+  $('#demo_test').submit(function() {
+    updateDemoContainer();
     return false;
   });
 
